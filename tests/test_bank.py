@@ -16,6 +16,7 @@ from source.example_app import main
 def mock_session():
     return Mock()
 
+
 def test_main(mock_session):
     main(mock_session)
 
