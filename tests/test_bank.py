@@ -20,5 +20,5 @@ def test_main(mock_session):
     main(mock_session)
 
     # Vérifiez que les méthodes appropriées de la session ont été appelées
-    assert mock_session.add.call_count == 5  # 2 transactions et 2 comptes
+    assert mock_session.add.call_count == 4  # 2 transactions et 2 comptes
     assert mock_session.commit.call_count == 3  # 3 fois pour les 3 commit() dans main()
