@@ -24,6 +24,7 @@ class Account(Base):
         self.balance += amount
         new_transaction = self.create_transaction(amount, "deposit")
         self.session.add(new_transaction)
+        self.session.commit()
         return self.balance
 
     def withdraw(self, amount):
@@ -32,6 +33,7 @@ class Account(Base):
             self.balance -= amount
             new_transaction = self.create_transaction(amount, "withdrawal")
             self.session.add(new_transaction)
+            self.session.commit()
             return self.balance
         else:
             return("Error: Insufficient funds")
