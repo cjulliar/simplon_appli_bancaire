@@ -14,3 +14,4 @@ def init_db():
         print(f"Error: {e}")
 
     return engine
+
